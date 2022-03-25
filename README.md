@@ -28,7 +28,7 @@ For example, sample data for both cities show that NYC doesn't have pm10 data, a
 
 ## Ingest Historical Data to InfluxDB
 - Historical air quality data for Kunming City and New York City was obtained from this <a href="https://aqicn.org/data-platform/register/" target="_blank">website</a>
-- Use a small dataset to test first, if the [code](./code/ingest-data.py) runs successfully, you should see your test data in the bucket, like this:
+- Use a small dataset to test first, if the [code](./code/ingest_historical.py) runs successfully, you should see your test data in the bucket, like this:
 ![Test Data](asset/images/test_data_loaded.png)
 - Ingest the historical air quality data for Kunming from 2014-01-01 to current, it will look like this:
 ![Historical Data One City](asset/images/historical_data_loaded_one_city.png)
@@ -52,7 +52,7 @@ For example, sample data for both cities show that NYC doesn't have pm10 data, a
 ## Ingest Live Data to InfluxDB
 - Register for free at <a href="https://www.weatherapi.com/" target="_blank">weather api</a>, save your token
 - Create a new bucket in InfluxDB for the live data
-- Run [code](./code/ingest-data.py) to get data from the api and write data to the new bucket in InfluxDB
+- Run [code](./code/ingest_live.py) to get data from the api and write data to the new bucket in InfluxDB
 ![API Live Data Loaded in InfluxDB](./asset/images/live_api_data_loaded_two_cities.png)
 ![Grafana Live Data Dashboard](./asset/images/grafana_dashboard_live_data_view.png)
 
